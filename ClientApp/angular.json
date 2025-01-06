@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "AngularSampleApp"
+  "defaultProject": "AngularSampleApp",
+  "cli": {
+    "analytics": false
+  }
 }

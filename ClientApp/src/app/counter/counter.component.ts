@@ -5,9 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './counter.component.html'
 })
 export class CounterComponent {
-  public currentCount = 0;
+  public currentCount:number = 0;
+  public step:number = 5;
 
-  public incrementCounter() {
-    this.currentCount++;
+  public incrementCounter(stepUp:number) {
+    this.currentCount+=stepUp;
+  }
+
+  public decrementCounter(stepDown:number) {
+    this.currentCount-=stepDown;
+  }
+
+  public setStep(newStep:any) {
+    this.step = parseInt(newStep.target.value, 10);
   }
 }

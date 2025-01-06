@@ -4,4 +4,8 @@
 
 <p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
 
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+<button class="btn btn-primary" (click)="incrementCounter(step)">Increment</button>
+<button class="btn btn-dark" (click)="decrementCounter(step)">Decrement</button>
+<br class="clr">
+
+<input type="range" min="1" max="9" value="{{ step }}" class="slider col-sm-4 col-md-8" (change)="setStep($event)">
